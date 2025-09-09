@@ -1,0 +1,143 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #23476e;
+  --accent-color: #f9c846;
+  --nav-bg: #333;
+  --nav-hover: #23476e;
+  --card-bg: #fff;
+  --card-border: #23476e;
+  --footer-bg: #23476e;
+  --footer-text: #fff;
+  --footer-accent: #f9c846;
+  --max-width: 1100px;
+}
+
+body {
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  background: #f6f8fa;
+  margin: 0;
+  color: #222;
+}
+
+header {
+  background: var(--primary-color);
+  color: var(--footer-text);
+  padding: 1rem 0 0.5rem 0;
+  text-align: center;
+}
+
+#course-title {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: var(--nav-bg);
+  padding: 0.5rem 0;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--nav-hover);
+  color: var(--accent-color);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(35,71,110,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h2 {
+  background: var(--primary-color);
+  color: var(--footer-text);
+  width: 100%;
+  text-align: center;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  padding: 0.75rem 0;
+  border-radius: 8px 8px 0 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card img {
+  border-radius: 6px;
+  margin: 1rem 0;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(35,71,110,0.08);
+}
+
+.card p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#lastModified {
+  color: var(--footer-accent);
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}

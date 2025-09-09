@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Ricardo Monrroy</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. This page provides an overview of dynamic web development concepts, assignments, and resources for the course.">
+    <meta name="author" content="Ricardo Monrroy">
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+      <nav>
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a>
+        <a href="final-project/" target="_blank">Final Project</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Ricardo Monrroy</h1>
+      <section class="card">
+        <h2>About Me</h2>
+        <img src="images/profile.jpg" alt="Ricardo Monrroy profile photo" width="300" height="400">
+        <p>Hello! I'm Ricardo Monrroy, a web development enthusiast from Mexico. I enjoy learning new technologies and building dynamic web applications.</p>
+      </section>
+      <section class="card">
+        <h2>My Interests</h2>
+        <img src="images/interests.jpg" alt="Interests image" width="300" height="200">
+        <p>I love coding, reading, and exploring new places. My favorite programming languages are JavaScript and Python.</p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; <span id="currentyear"></span> Ricardo Monrroy, Mexico
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+    <script>
+      // Dynamically set current year
+      document.getElementById('currentyear').textContent = new Date().getFullYear();
+      // Dynamically set last modified date
+      document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+    </script>
+  </body>
+</html>
