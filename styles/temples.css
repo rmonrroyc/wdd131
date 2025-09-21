@@ -1,0 +1,148 @@
+/* Mobile  Design */
+
+:root {
+  --primary: #0d3b66;
+  --accent: #f4d35e;
+  --background: #f0f4f8;
+  --card-bg: #ffffff;
+  --text: #1a1a1a;
+  --nav-bg: #0d3b66;
+  --nav-link: #ffffff;
+  --nav-link-hover: #f4d35e;
+  --footer-bg: #0d3b66;
+  --footer-text: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+header {
+  background: var(--primary);
+  color: var(--footer-text);
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+nav .hamburger {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: var(--nav-link);
+  cursor: pointer;
+}
+
+nav .nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background: var(--nav-bg);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+nav .nav-links.active {
+  display: flex;
+}
+
+nav .nav-links a {
+  color: var(--nav-link);
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a:focus {
+  background: var(--nav-link-hover);
+  color: var(--primary);
+}
+
+.hamburger.active::before {
+  content: 'X';
+  font-size: 32px;
+}
+
+.hamburger::before {
+  content: '\2630'; 
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main .gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+main > h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+figure {
+  background: var(--card-bg);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
