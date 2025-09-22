@@ -33,6 +33,13 @@
     gap: 1.5rem;
   }
 
+  .gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
   figure {
     margin: 0;
   }
