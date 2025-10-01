@@ -1,1 +1,70 @@
+/* ===== Global Styles ===== */
+:root {
+  --primary-color: #d9251f; /* Red */
+  --secondary-color: #007e3a; /* Green */
+  --accent-color: #ffffff; /* White */
+  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  background-color: var(--accent-color);
+  color: #333;
+}
+
+/* ===== Header & Footer ===== */
+header, footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== Hero Section ===== */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Weather Section ===== */
+.weather {
+  padding: 1rem;
+  text-align: center;
+  background-color: #f3f3f3;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-icon-mobile {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.weather-icon-desktop::after {
+  content: " ⛅";
+  font-size: 1.5rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (min-width: 600px) {
+  .weather-info {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .weather-icon-mobile {
+    display: none;
+  }
+}
