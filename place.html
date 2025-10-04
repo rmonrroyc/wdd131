@@ -15,39 +15,47 @@
   </header>
   <main>
     <section class="hero">
-  <picture>
-    <source srcset="images/hero-large.webp" media="(min-width: 900px)">
-    <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
-    <img src="images/hero-small.webp" alt="Scenic view of Concepción">
-  </picture>
-      
-  <div class="info-box data-box">
-    <div class="box-header">Data</div>
-    <ul>
-      <li><strong>Area:</strong> 221.6 km2</li>
-      <li><strong>Population:</strong> 239,776</li>
-      <li><strong>Capital:</strong> Concepcion</li>
-      <li><strong>Languages:</strong> Español</li>
-      <li><strong>Currency:</strong>  Peso Chileno (CLP)</li>
-      <li><strong>Time Zone:</strong> UTC-3</li>
-      <li><strong>Calling Code:</strong> +56 (41)</li>
-      <li><strong>Internet TLD:</strong> .cl</li>
-    </ul>
-  </div>
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 900px)">
+        
+        <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+        
+        <img src="images/hero-small.webp" alt="Scenic view of Concepción">
+      </picture>
 
-  <div class="info-box weather-box">
-    <div class="box-header">
-      Weather <span class="weather-icon-desktop"></span>
-    </div>
-    <ul>
-      <li><strong>Temperature:</strong> <span id="temperature">10</span> °C</li>
-      <li><strong>Conditions:</strong> Partly Cloudy</li>
-      <li><strong>Wind:</strong> <span id="windSpeed">5</span> km/h</li>
-      <li><strong>Wind Chill:</strong> <span id="windChill">Loading...</span> °C</li>
-    </ul>
-  </div>
-</section>
-    
+      <div class="info-box data-box">
+        <div class="box-header">Data</div>
+        <ul>
+          <li><strong>Area:</strong> 221.6 km2</li>
+          <li><strong>Population:</strong> 239,776</li>
+          <li><strong>Capital:</strong> Concepcion</li>
+          <li><strong>Languages:</strong> Español</li>
+          <li><strong>Currency:</strong> Peso Chileno (CLP)</li>
+          <li><strong>Time Zone:</strong> UTC-3</li>
+          <li><strong>Calling Code:</strong> +56 (41)</li>
+          <li><strong>Internet TLD:</strong> .cl</li>
+        </ul>
+      </div>
+
+      <div class="info-box weather-box">
+        <div class="box-header">
+          Weather
+          <span class="weather-icon-desktop">
+            <img src="images/weather-icon-desktop.png" alt="Weather icon">
+          </span>
+          
+          <span class="weather-icon-mobile">
+            <img src="images/weather-icon-mobile.svg" alt="Weather icon for mobile">
+          </span>
+        </div>
+        <ul>
+          <li><strong>Temperature:</strong> <span id="temperature">10</span> °C</li>
+          <li><strong>Conditions:</strong> Partly Cloudy</li>
+          <li><strong>Wind:</strong> <span id="windSpeed">5</span> km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="windChill">Loading...</span> °C</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -55,4 +63,3 @@
   </footer>
 </body>
 </html>
-
