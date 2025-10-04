@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #d9251f;
-  --secondary-color: #007e3a;
+  --primary-color: #d9251f; 
+  --secondary-color: #007e3a; 
   --accent-color: #ffffff; 
   --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -12,8 +12,7 @@ body {
   color: #333;
 }
 
-header,
-footer {
+header, footer {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
@@ -44,7 +43,14 @@ footer {
 .weather-icon-mobile {
   width: 48px;
   height: 48px;
-  display: block;
+  display: none; 
+  margin-bottom: 0.5rem;
+}
+
+.weather-icon-desktop {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
   margin-bottom: 0.5rem;
 }
 
@@ -53,35 +59,19 @@ footer {
   font-size: 1.5rem;
 }
 
-@media (min-width: 600px) {
-  .weather-info {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .weather-icon-mobile {
-    display: none;
-  }
-}
-
 .hero {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .info-box {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.85); 
+  background-color: rgba(255, 255, 255, 0.9); 
   color: #000;
   padding: 1rem;
   width: 250px;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   font-size: 0.95rem;
-  margin-top: 1.5rem; 
 }
 
 .data-box {
@@ -95,16 +85,16 @@ footer {
 }
 
 .box-header {
-  position: absolute;
-  top: -1rem;
-  left: 1rem;
-  background-color: rgba(0, 126, 58, 0.85);
+  background-color: var(--secondary-color); 
   color: white;
   font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  padding: 0.5rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: -1rem -1rem 1rem -1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .info-box ul {
@@ -122,15 +112,24 @@ footer {
     position: static;
     width: auto;
     margin: 1rem;
-    margin-top: 2rem; 
   }
 
-  .box-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: 0.5rem;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-icon-desktop {
+    display: none; 
+  }
+
+  .weather-icon-mobile {
+    display: inline-block; 
+    width: 40px;
+    height: 40px;
   }
 }
+
 
 
