@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #d9251f; /* Red */
-  --secondary-color: #007e3a; /* Green */
-  --accent-color: #ffffff; /* White */
+  --primary-color: #d9251f;
+  --secondary-color: #007e3a;
+  --accent-color: #ffffff; 
   --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -12,7 +12,8 @@ body {
   color: #333;
 }
 
-header, footer {
+header,
+footer {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
@@ -64,20 +65,23 @@ header, footer {
   }
 }
 
-/* ===== Info Boxes (Data & Weather) ===== */
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info-box {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9); /* translucent white */
+  background-color: rgba(255, 255, 255, 0.85); 
   color: #000;
   padding: 1rem;
   width: 250px;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   font-size: 0.95rem;
+  margin-top: 1.5rem; 
 }
 
 .data-box {
@@ -91,84 +95,18 @@ header, footer {
 }
 
 .box-header {
-  background-color: var(--secondary-color); /* green */
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  margin: -1rem -1rem 1rem -1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Remove default list styles inside boxes */
-.info-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.info-box li {
-  margin-bottom: 0.4rem;
-}
-
-/* Responsive: stack boxes vertically on smaller screens */
-@media (max-width: 600px) {
-  .info-box {
-    position: static;
-    width: auto;
-    margin: 1rem;
-  }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* ===== Info Boxes (Data & Weather) ===== */
-.hero {
-  position: relative;
-}
-
-.info-box {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9); /* translucent white */
-  color: #000;
-  padding: 1rem;
-  width: 250px;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  font-size: 0.95rem;
-}
-
-.data-box {
-  top: 20px;
-  left: 20px;
-}
-
-.weather-box {
-  bottom: 20px;
-  right: 20px;
-}
-
-.box-header {
-  background-color: var(--secondary-color); /* green */
+  top: -1rem;
+  left: 1rem;
+  background-color: rgba(0, 126, 58, 0.85);
   color: white;
   font-weight: bold;
-  padding: 0.5rem;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  margin: -1rem -1rem 1rem -1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
-/* Remove default list styles inside boxes */
 .info-box ul {
   list-style: none;
   padding: 0;
@@ -179,18 +117,19 @@ header, footer {
   margin-bottom: 0.4rem;
 }
 
-/* Responsive: stack boxes vertically on smaller screens */
 @media (max-width: 600px) {
   .info-box {
     position: static;
     width: auto;
     margin: 1rem;
+    margin-top: 2rem; 
   }
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .box-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 0.5rem;
   }
 }
 
