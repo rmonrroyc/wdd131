@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #d9251f; 
-  --secondary-color: #007e3a;
-  --accent-color: #ffffff; 
+  --primary-color: #d9251f;
+  --secondary-color: #007e3a; 
+  --accent-color: #ffffff;
   --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -35,7 +35,7 @@ header, footer {
 
 .weather-info {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
@@ -47,7 +47,7 @@ header, footer {
 
 .info-box {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9); 
   color: #000;
   padding: 1rem;
   width: 250px;
@@ -67,7 +67,7 @@ header, footer {
 }
 
 .box-header {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color); 
   color: white;
   font-weight: bold;
   padding: 0.5rem;
@@ -104,29 +104,19 @@ header, footer {
     align-items: center;
   }
 
- 
-  .weather-icon-desktop {
-    display: none; 
-  }
 
-  .weather-icon-mobile {
-    display: inline-block;
-    width: 40px;
+  .weather-icon img {
+    display: block; 
+    width: 40px; 
     height: 40px;
   }
 }
-
 
 @media (min-width: 601px) {
-  .weather-icon-desktop {
-    display: inline-block; 
-    width: 40px;
-    height: 40px;
-  }
-
-  .weather-icon-mobile {
-    display: none;
+  .weather-icon img {
+    display: block;
+    width: 50px; 
+    height: 50px;
   }
 }
-
 
