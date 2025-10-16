@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concepción Heritage</title>
+  <meta name="description" content="WDD 131 - Website Proyect.">
+  <meta name="author" content="Ricardo Monrroy">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="logo-title">
+      <img src="images/logo.svg" alt="Logo" class="site-logo" />
+      <h1>Concepción Heritage</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+  <picture>
+    <source srcset="images/hero-large.webp" media="(min-width: 900px)">
+    <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+    <img src="images/hero-small.webp" alt="Scenic view of Concepción">
+  </picture>
+
+  <div class="info-box data-box">
+    <div class="box-header">Data</div>
+    <ul>
+      <li><strong>Area:</strong> 221.6 km²</li>
+      <li><strong>Population:</strong> 239,776</li>
+      <li><strong>Capital:</strong> Concepción</li>
+      <li><strong>Languages:</strong> Spanish</li>
+      <li><strong>Currency:</strong> Chilean Peso (CLP)</li>
+      <li><strong>Time Zone:</strong> UTC-3</li>
+    </ul>
+  </div>
+
+  <div class="info-box weather-box">
+    <div class="box-header">
+      Weather
+      <span class="weather-icon">
+        <img src="images/weather.svg" alt="Weather icon">
+      </span>
+    </div>
+    <ul>
+      <li><strong>Temperature:</strong> <span id="temperature">--</span> °C</li>
+      <li><strong>Conditions:</strong> <span id="conditions">--</span></li>
+      <li><strong>Wind:</strong> <span id="windSpeed">--</span> km/h</li>
+      <li><strong>Wind Chill:</strong> <span id="windChill">Loading...</span> °C</li>
+    </ul>
+  </div>
+    </section>
+
+<section class="features-row">
+  <div class="feature-card">
+    <img src="images/food.jpg" alt="Traditional Chilean Food" class="feature-img" loading="lazy">
+    <div class="feature-overlay">
+      <h3>Traditional Food</h3>
+      <p>Discover local flavors and traditional Chilean dishes from Concepción.</p>
+      <a href="food.html" class="feature-btn">See More</a>
+    </div>
+  </div>
+
+  <div class="feature-card">
+    <img src="images/concepcion-university.jpg" alt="Historical sites in Concepción" class="feature-img" loading="lazy">
+    <div class="feature-overlay">
+      <h3>Historical Sites</h3>
+      <p>Explore the rich history and cultural heritage of the city.</p>
+      <a href="history.html" class="feature-btn">See More</a>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Concepción Heritage | Designed by Ricardo Monrroy</p>
+    <a href="references.html">References</a>
+  </footer>
+</body>
+</html>
