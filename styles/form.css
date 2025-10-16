@@ -38,6 +38,7 @@ fieldset {
 }
 
 label, legend {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 0.3em;
 }
@@ -84,8 +85,7 @@ textarea {
   color: gold;
 }
 
-
-.btn-submit {
+input[type="submit"] {
   background-color: #123f56;
   color: #fff;
   border: none;
@@ -95,7 +95,7 @@ textarea {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
-.btn-submit:hover {
+input[type="submit"]:hover {
   background-color: #0f3346;
   transform: scale(1.03);
 }
