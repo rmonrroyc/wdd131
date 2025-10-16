@@ -1,11 +1,12 @@
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   background-color: #f6f9fc;
   color: #333;
   margin: 0;
   padding: 0;
 }
+
 
 header {
   background-color: #156f72;
