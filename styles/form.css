@@ -7,6 +7,9 @@ body {
   padding: 0;
 }
 
+h1, label, legend {
+  font-family: "Poppins", sans-serif;
+}
 
 header {
   background-color: #156f72;
@@ -38,7 +41,6 @@ fieldset {
 }
 
 label, legend {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 0.3em;
 }
