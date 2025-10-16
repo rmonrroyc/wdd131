@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("productName");
   products.forEach(product => {
     const option = document.createElement("option");
-    option.value = product.name;
+    option.value = product.id;     
     option.textContent = product.name;
     select.appendChild(option);
   });
