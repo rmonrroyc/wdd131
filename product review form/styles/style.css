@@ -1,0 +1,141 @@
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f6f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #156f72;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 2em auto;
+  background: #fff;
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.form-group,
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+label, legend {
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+select, input[type="text"], input[type="date"], textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+select:focus, input:focus, textarea:focus {
+  border-color: #156f72;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.stars input {
+  display: none;
+}
+.stars label {
+  font-size: 2em;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.stars input:checked ~ label {
+  color: gold;
+}
+.stars label:hover,
+.stars label:hover ~ label {
+  color: gold;
+}
+
+
+.btn-submit {
+  background-color: #123f56;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9em;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.btn-submit:hover {
+  background-color: #0f3346;
+  transform: scale(1.03);
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #ec9018;
+  color: #fff;
+  font-weight: 500;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+@media (max-width: 600px) {
+  main {
+    margin: 1em;
+    padding: 1em;
+  }
+
+  header {
+    padding: 1em 0.5em;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .stars label {
+    font-size: 1.6em;
+  }
+
+  .btn-submit {
+    font-size: 1em;
+    padding: 0.8em;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
