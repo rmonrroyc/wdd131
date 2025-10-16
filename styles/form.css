@@ -7,15 +7,16 @@ body {
   padding: 0;
 }
 
-h1, label, legend {
-  font-family: "Poppins", sans-serif;
-}
-
 header {
   background-color: #156f72;
   color: #fff;
   text-align: center;
   padding: 1.5em 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header h1 {
+  margin: 0;
 }
 
 main {
@@ -25,8 +26,8 @@ main {
   padding: 2em;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-family: "Roboto", sans-serif;
 }
-
 
 form {
   display: flex;
@@ -34,15 +35,10 @@ form {
   gap: 1.5em;
 }
 
-.form-group,
-fieldset {
-  display: flex;
-  flex-direction: column;
-}
-
 label, legend {
   font-weight: 600;
   margin-bottom: 0.3em;
+  font-family: "Poppins", sans-serif;
 }
 
 select, input[type="text"], input[type="date"], textarea {
@@ -62,7 +58,6 @@ select:focus, input:focus, textarea:focus {
 textarea {
   resize: vertical;
 }
-
 
 .stars {
   display: flex;
@@ -102,7 +97,6 @@ input[type="submit"]:hover {
   transform: scale(1.03);
 }
 
-
 footer {
   text-align: center;
   margin-top: 2em;
@@ -113,7 +107,6 @@ footer {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
 
 @media (max-width: 600px) {
   main {
@@ -133,7 +126,7 @@ footer {
     font-size: 1.6em;
   }
 
-  .btn-submit {
+  input[type="submit"] {
     font-size: 1em;
     padding: 0.8em;
   }
