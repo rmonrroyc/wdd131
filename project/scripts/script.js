@@ -1,8 +1,6 @@
-
 const visits = localStorage.getItem("visits");
 const updatedVisits = visits ? parseInt(visits) + 1 : 1;
 localStorage.setItem("visits", updatedVisits);
-
 
 function calculateWindChill(temp, speed) {
   return (
@@ -13,19 +11,15 @@ function calculateWindChill(temp, speed) {
   ).toFixed(1);
 }
 
-
 const temperature = 10; // °C
 const windSpeed = 5; // km/h
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  
   const yearEl = document.getElementById("currentYear");
   const modifiedEl = document.getElementById("lastModified");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
   if (modifiedEl) modifiedEl.textContent = document.lastModified;
 
- 
   const tempEl = document.getElementById("temperature");
   const windEl = document.getElementById("windSpeed");
   const chillEl = document.getElementById("windChill");
@@ -40,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  
   const foodList = [
     {
       name: "Cazuela",
@@ -98,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
   const form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -108,4 +100,21 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     });
   }
-});
+
+ 
+  let lastScrollTop = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 50) {
+      header.style.transform = "translateY(-100%)"; 
+    } else {
+      header.style.transform = "translateY(0)"; 
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+}); 
+
